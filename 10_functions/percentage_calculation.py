@@ -1,0 +1,2 @@
+# Write a function " percent( value, total ) " , that takes in two numbers as arguments, and returns the percentage value as an integer ? 
+# for more info on this quiz, go to this url: http://www.programmr.com/percentage-calculation

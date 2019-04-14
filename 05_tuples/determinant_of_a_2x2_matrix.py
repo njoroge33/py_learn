@@ -1,0 +1,2 @@
+# The determinant of a 2x2 matrix is the product of the elements on the main diagonal minus the product of the elements off the main diagonal 
+# for more info on this quiz, go to this url: http://www.programmr.com/determinant-2x2-matrix

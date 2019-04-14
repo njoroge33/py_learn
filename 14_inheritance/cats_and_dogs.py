@@ -1,0 +1,2 @@
+# Given a class Pet, write a empty class Cat that inherits from it, and a class Dog which has an instance method eat_cat() which prints the statement dog_name has eaten cat_name , as shown in the following example: 
+# for more info on this quiz, go to this url: http://www.programmr.com/cats-and-dogs-1

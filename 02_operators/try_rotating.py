@@ -1,0 +1,2 @@
+# Write a program that given one number, the user can choose to rotate its composing bits to the right or the left 
+# for more info on this quiz, go to this url: http://www.programmr.com/try-rotating-0

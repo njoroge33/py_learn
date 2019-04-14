@@ -1,10 +1,10 @@
 import os
 import re
-from http import cookiejar
 from dotenv import load_dotenv
 
 import mechanize
 import requests
+import bs4
 from bs4 import BeautifulSoup
 from tidylib import tidy_document
 
@@ -17,17 +17,19 @@ def slugify(name):
     return regex.sub('', slug)
 
 
-def add_file(dir_name, f_name, cont=[]):
+def add_file(dir_name, f_name, url=None, cont=[]):
     print('creating file: {}'.format(f_name))
-    with open('{}/{}.py'.format(dir_name, f_name), 'w') as f:
-        print('adding quiz description to file: {}'.format(f_name))
+    with open(f'{dir_name}/{f_name}.py', 'w') as f:
+        print(f'adding quiz description to file: {f_name}')
         for l in cont:
-            f.write("# {} \n".format(l.strip()))
+            f.write(f"# {l.strip()} \n")
+        if url:
+            f.write(f"# for more info on this quiz, go to this url: {url}")
 
 
 def create_folder(name):
-    print('\n\ncreating folder: {}'.format(name))
-    path = '{}'.format(name)
+    print(f'\n\ncreating folder: {name}')
+    path = name
     os.mkdir(path)
     add_file(path, '__init__')
     return path
@@ -35,7 +37,6 @@ def create_folder(name):
 
 def login():
     br = mechanize.Browser()
-
     br.set_handle_equiv(True)
     br.set_handle_gzip(True)
     br.set_handle_redirect(True)
@@ -48,12 +49,9 @@ def login():
 
     # # View available forms
     # for f in br.forms():
-    #     print('-----------------------------------')
     #     print(f)
 
     br.select_form(nr=1)
-
-    # User credentials
     br.form['name'] = os.getenv('USERNAME')
     br.form['pass'] = os.getenv('PASSWORD')
 
@@ -62,13 +60,21 @@ def login():
     return br
 
 def get_quiz_content(page):
-    soup = BeautifulSoup(page, 'html.parser')
-    q_desc_html = soup.find(class_='story')
-    x = [tidy_document(str(x)) for x in q_desc_html.find_all('p')]
+    try:
+        soup = BeautifulSoup(page, 'html.parser')
+        q_desc_html = soup.find(class_='story')
+        x_c = [tidy_document(str(x)) for x in q_desc_html.find_all('p')]
 
-    x_s = BeautifulSoup(x[0][0], 'html.parser')
-    q_desc = x_s.find('p').text.strip()
-    return [x for x in q_desc.split('.') if x]
+        x_s = BeautifulSoup(x_c[0][0], 'html.parser')
+        q_desc = x_s.find('p').text.strip()
+        return [x for x in q_desc.split('.') if x]
+    except Exception as err:
+        q_c = [x for x in q_desc_html.descendants][:2]
+        if isinstance(q_c[1], bs4.element.Tag):
+            q_c[1] = q_c[1].text
+        else:
+            q_c[1] = ''
+        return q_c
 
 
 def main():
@@ -76,20 +82,26 @@ def main():
     q_c = requests.get(quiz_p)
     soup = BeautifulSoup(q_c.text, 'html.parser')
     li_w_c = soup.find_all(class_ = 'exercise')
+    li_w_c.reverse()
+
     br = login()
-    for li in li_w_c:
+    for idx, li in enumerate(li_w_c):
         try:
-            dir_name = slugify(li.find(class_ = 'top_node').text.strip())
+            n = slugify(li.find(class_ = 'top_node').text.strip())
+            dir_name = f'{idx+1:02d}_{n}'
             ul_c = li.find('ul')
             files = ul_c.find_all('li')
             path = create_folder(dir_name)
             for file in files:
-                a = file.find('a')
-                f_name = slugify(a.text.strip())
-                url = 'http://www.programmr.com/{}'.format(a.get('href'))
-                cont = br.open(url).read()
-                q_cont = get_quiz_content(cont)
-                add_file(path, f_name, cont=q_cont)
+                try:
+                    a = file.find('a')
+                    f_name = slugify(a.text.strip())
+                    url = f'http://www.programmr.com{a.get("href")}'
+                    cont = br.open(url).read()
+                    q_cont = get_quiz_content(cont)
+                    add_file(path, f_name, url, cont=q_cont)
+                except Exception as err:
+                    print(err)
         except Exception as err:
             print(err)
 

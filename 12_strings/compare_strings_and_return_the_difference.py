@@ -1,0 +1,2 @@
+# Write a program to compare two strings and display the difference between first two non-matching characters 
+# for more info on this quiz, go to this url: http://www.programmr.com/compare-strings-and-return-difference
