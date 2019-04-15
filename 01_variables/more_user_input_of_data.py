@@ -15,12 +15,12 @@
 
 
 def profile():
-    first_name = input("Enter your first name:")
-    last_name = input("Enter your last name:")
-    student_id = int(input("Enter your student ID:"))
-    login = input("Enter your password:")
-    gpa = float(input("Enter your GPA(0.0-4.0):"))
-    grade = int(input("Enter your grade(9-12):"))
+    first_name = input("Enter your first name: ")
+    last_name = input("Enter your last name: ")
+    student_id = int(input("Enter your student ID: "))
+    login = input("Enter your password: ")
+    gpa = float(input("Enter your GPA(0.0-4.0): "))
+    grade = int(input("Enter your grade(9-12): "))
     print(" ")
 
     print(f"Name: {last_name},{first_name}")
