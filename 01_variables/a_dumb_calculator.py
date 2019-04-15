@@ -16,4 +16,4 @@ def simple_calc():
     return total
 
 
-print(simple_calc()) 
+print(simple_calc())
