@@ -3,8 +3,9 @@
 
 
 def drop_decimals():
+    import math
     decimal = float(input("Please,Enter a number with a decimal place: "))
-    number = int(decimal)
+    number = math.floor(decimal)
     return number
 
 

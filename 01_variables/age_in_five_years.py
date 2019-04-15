@@ -6,7 +6,7 @@
 # for more info on this quiz, go to this url: http://www.programmr.com/age-five-years-3
 
 name = input("Hello, What is your name: ")
-age = int(input("%s, How old are you: " % name))
+age = int(input(f"{name}, How old are you: "))
 
 
 def age_plus_five():
@@ -14,7 +14,7 @@ def age_plus_five():
     return total
 
 
-print(age_plus_five())
+print(f"{name}, you will be {age_plus_five()} years old in five years from now")
 
 
 def age_minus_five():
@@ -22,4 +22,4 @@ def age_minus_five():
     return total
 
 
-print(age_minus_five())
+print(f"{name}, you were be {age_minus_five()} years old  five years ago")

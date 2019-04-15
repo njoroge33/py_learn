@@ -9,7 +9,7 @@ def reverse_number():
         number = input("Enter a number: ")
         number_lst.append(number)
     number_lst.reverse()
-    return"".join(number_lst)
+    return "".join(number_lst)
 
 
 print(reverse_number())
