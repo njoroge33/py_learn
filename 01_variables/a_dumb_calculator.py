@@ -7,12 +7,13 @@
 
 
 def simple_calc():
-    numbers = input("Enter three numbers separated with a space: ")
-    lst = numbers.split()
-    total = 0
-    for i in lst:
-        total += int(i)
+    print("Enter three numbers")
+    user_inputs = []
+    for i in range(3):
+        user_input = float(input("Enter a number: "))
+        user_inputs.append(user_input)
+    total = sum(user_inputs) / 2
     return total
 
 
-print(simple_calc())
+print(simple_calc()) 
