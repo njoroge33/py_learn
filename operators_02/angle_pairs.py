@@ -10,5 +10,5 @@ def angle_pairs(x, y, z):
         return False
 
 
-if __name__ == __main__:
-    angle_pairs(30, 40, 20)
+if __name__ == "__main__":
+    print(angle_pairs(30, 40, 50))
