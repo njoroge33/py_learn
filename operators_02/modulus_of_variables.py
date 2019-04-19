@@ -8,10 +8,10 @@
 
 def modulus(a, b):
     if b == 0:
-        print("Math error")
+        return "Math error"
     else:
-        print(a % b)
+        return a % b
 
 
 if __name__ == "__main__":
-    modulus(2, 4)
+    print(modulus(2, 4))
