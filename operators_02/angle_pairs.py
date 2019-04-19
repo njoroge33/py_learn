@@ -4,11 +4,15 @@
 
 
 def angle_pairs(x, y, z):
-    if x + y == 90 or x + z == 90 or y + z == 90 or x + y == 180 or x + z == 180 or y + z == 180:
+    a = x + y
+    b = x + z
+    c = y + z
+
+    if (a == 90 or b == 90 or c == 90) and (a == 180 or b == 180 or c == 180):
         return True
     else:
         return False
 
 
 if __name__ == "__main__":
-    print(angle_pairs(30, 40, 50))
+    print(angle_pairs(50, 40, 60))
