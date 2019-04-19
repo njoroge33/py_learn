@@ -8,6 +8,6 @@ from ..average_and_percentage import average
     (20, 20, 20, 20, 20),
     (100, 100, 100, 100, 100)
 ])
-def test_area_average(a, b, c, d, expected):
+def test_average(a, b, c, d, expected):
     actual = average(a, b, c, d)
     assert actual == expected

@@ -10,5 +10,5 @@ from ..cartesian_to_polar_coordinates import cartesian_to_polar_coordinates
     (-33.5, 24, (41.20, 144.38)),
 ])
 def test_cartesian_to_polar_coordinates(x, y, expected):
-    actual = cartesian_to_polar_coordinates(x, y)github .
+    actual = cartesian_to_polar_coordinates(x, y)
     assert actual == expected
