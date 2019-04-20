@@ -3,11 +3,11 @@
 
 
 def even_multiple_of_3(number):
-    if number % 3 == 0:
+    if number % 3 == 0 and number % 2 == 0:
         return True
     else:
         return False
 
 
 if __name__ == "__main__":
-    print(even_multiple_of_3(51))
+    print(even_multiple_of_3(6))

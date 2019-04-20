@@ -11,9 +11,9 @@ import math
 
 def cartesian_to_polar_coordinates(x, y):
     r = round(math.sqrt(x**2 + y**2), 2)
-    theta = round(math.degrees(math.atan(x/y)), 2)
+    theta = round(math.degrees(math.atan(y/x)), 2)
     return r, theta
 
 
 if __name__ == "__main__":
-    print(cartesian_to_polar_coordinates(5, 12))
+    print(cartesian_to_polar_coordinates(12, 5))
