@@ -6,4 +6,11 @@
 
 
 def average(a, b, c, d):
-    pass
+    if a > 100 or b > 100 or c > 100 or d > 100:
+        return "Invalid mark"
+    else:
+        return round((a + b + c + d)/4, 2)
+
+
+if __name__ == "__main__":
+    print(average(56, 78, 90, 87))
