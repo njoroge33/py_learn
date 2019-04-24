@@ -5,4 +5,8 @@
 
 
 def find_popular_item(arr_x):
-    pass
+    return max(set(arr_x), key=arr_x.count)
+
+
+if __name__ == "__main__":
+    print(find_popular_item([1, 2, 5, 5, 3, 3, 7, 3]))
