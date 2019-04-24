@@ -7,4 +7,9 @@
 
 
 def calculator(a, b, c):
-    pass
+    total = float((a + b + c)/2)
+    return round(total, 2)
+
+
+if __name__ == "__main__":
+    print(calculator(4.2, 5, 8.6))

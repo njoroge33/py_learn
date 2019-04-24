@@ -4,4 +4,8 @@
 
 
 def get_root(x, n):
-    pass
+    return n ** (1/x)
+
+
+if __name__ == "__main__":
+    print(get_root(5, 32))

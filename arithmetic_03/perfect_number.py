@@ -4,4 +4,16 @@
 
 
 def is_perfect(number):
-    pass
+    new_lst = []
+    for i in range(1, number):
+        if number % i == 0:
+            new_lst.append(i)
+    print(new_lst)
+    if sum(new_lst) == number:
+        return True
+    else:
+        return False
+
+
+if __name__ == "__main__":
+    print(is_perfect(14))
