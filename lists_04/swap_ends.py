@@ -6,4 +6,15 @@
 
 
 def swap_ends(arr_x):
-    pass
+    a = []
+    for i in range(len(arr_x), len(arr_x)+1):
+        a.append(i)
+    for i in range(2, len(arr_x)):
+        a.append(i)
+    for i in range(1, 2):
+        a.append(i)
+    print(a)
+
+
+if __name__ == "__main__":
+    print(swap_ends([1, 2, 3, 4, 5]))
