@@ -1,5 +1,5 @@
-# Write a program that accepts five integers as input 
-# Program should print "True" if the list contains, somewhere, three increasing adjacent numbers like 
-# 4,5,6 
-# Otherwise, print "False" 
+# Write a function that takes a list of integers
+# Program should return  "True" if the list contains, somewhere, three increasing adjacent numbers like
+# 4,5,6
+# Otherwise, return "False"
 # for more info on this quiz, go to this url: http://www.programmr.com/three-row
