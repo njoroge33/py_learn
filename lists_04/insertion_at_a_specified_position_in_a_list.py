@@ -5,8 +5,8 @@
 
 
 def insert_into_list(arr, num, position):
-    arr.insert(position, num)
-    return arr
+    b = arr[:position] + [num] + arr[position:]
+    return b
 
 
 if __name__ == "__main__":
