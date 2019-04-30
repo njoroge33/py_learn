@@ -5,11 +5,12 @@
 
 
 def find_number(x_arr, x):
-    if x not in x_arr:
-        return "None"
+    for i in x_arr:
+        if x == i:
+            return x_arr.index(x)
     else:
-        return x_arr.index(x)
+            return None
 
 
 if __name__ == "__main__":
-    print(find_number([1, 2, 3, 4, 6], 6))
+    print(find_number([1, 2, 3, 4, 6], 8))
