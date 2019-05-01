@@ -8,4 +8,4 @@ def get_root(x, n):
 
 
 if __name__ == "__main__":
-    print(get_root(5, 32))
+    print(int(get_root(2, 100)))
