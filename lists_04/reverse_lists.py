@@ -10,7 +10,7 @@ def reverse_lists(arr_y):
     for i in arr_y:
         i.reverse()
         rev_lst.append(i)
-    print(rev_lst)
+    return rev_lst
 
 
 print(reverse_lists([[1, 2, 3], [4, 5, 6], [7, 8]]))
