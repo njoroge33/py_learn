@@ -7,12 +7,12 @@
 
 def index_and_element_equal(x_arr):
     x_arr.sort()
-    for i in x_arr:
+    for i in range(len(x_arr)):
         if i == x_arr[i]:
-            print(i)
-        else:
-            return "None"
+            return i
+
+    return None
 
 
 if __name__ == "__main__":
-    print(index_and_element_equal([3, 5, 6, 7, 8, 0, 2, 1]))
+    print(index_and_element_equal([0, 1, 3, 5, 6, 7, 8]))
