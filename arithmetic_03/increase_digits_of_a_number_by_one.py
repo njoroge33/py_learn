@@ -7,8 +7,10 @@ def increase_digits_of_a_number_by_one(number):
     numb_lst = map(int, list(str(number)))
     new_lst = []
     for i in numb_lst:
-        new_lst.append(i + 1)
-    return "".join(map(str, new_lst))
+        new_lst.append(1)
+    k = "".join(map(str, new_lst))
+    total = int(k) + number
+    return total
 
 
-print(increase_digits_of_a_number_by_one(7896))
+print(increase_digits_of_a_number_by_one(1))

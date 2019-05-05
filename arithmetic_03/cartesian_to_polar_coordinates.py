@@ -9,9 +9,23 @@
 import math
 
 
+def get_quad_offset(x, y):
+    x_neg = x < 0
+    y_neg = y < 0
+
+    if x_neg and not y_neg:
+        return 180
+    elif x_neg and y_neg:
+        return -180
+    elif not x_neg and y_neg:
+        return 360
+    else:
+        return 0
+
+
 def cartesian_to_polar_coordinates(x, y):
     r = round(math.sqrt(x**2 + y**2), 2)
-    theta = round(math.degrees(math.atan(y/x)), 2)
+    theta = get_quad_offset(x, y) + round(math.degrees(math.atan(y/x)), 2)
     return r, theta
 
 

@@ -4,4 +4,14 @@
 
 
 def reverse_list(arr_x):
-    pass
+    new_lst = []
+    b = len(arr_x)-1
+    for i in range(len(arr_x)):
+        while b >= 0:
+            new_lst.append(arr_x[b])
+
+            b -= 1
+    return new_lst
+
+
+print(reverse_list([1, 2, 3, 4, 5, 6, 7]))

@@ -6,4 +6,11 @@
 
 
 def reverse_lists(arr_y):
-    pass
+    rev_lst = []
+    for i in arr_y:
+        i.reverse()
+        rev_lst.append(i)
+    return rev_lst
+
+
+print(reverse_lists([[1, 2, 3], [4, 5, 6], [7, 8]]))
