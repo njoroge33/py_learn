@@ -3,5 +3,5 @@
 # for more info on this quiz, go to this url: http://www.programmr.com/count-tuple
 
 
-def get_frequency(tup_x):
+def get_frequency(tup_x, n_to_count):
     pass
