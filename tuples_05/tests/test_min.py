@@ -1,6 +1,7 @@
 import pytest
 from ..min import tup_min
 
+
 @pytest.mark.parametrize('tuple_x, expected', [
     ((23, 13, 8, 6), 6),
     ((3, 8, 4, 6), 3),

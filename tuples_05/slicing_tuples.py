@@ -5,4 +5,13 @@
 
 
 def tuple_slice(names, ages, cities):
-    pass
+    empty = []
+    for i in range(len(names)):
+        k = names[i], ages[i], cities[i]
+        empty.append(k)
+    return tuple(empty)
+
+
+if __name__ == "__main__":
+    print(tuple_slice(('Gitau', 'Kanyoi', 'Ndegwa'), (13, 24, 5), ('Njogu-ini', 'Limuru', 'Kamae')))
+

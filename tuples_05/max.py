@@ -3,4 +3,12 @@
 
 
 def tup_max(tup_m):
-    pass
+    maxi = tup_m[0]
+    for i in tup_m:
+        if i > maxi:
+            maxi = i
+    return maxi
+
+
+if __name__ == "__main__":
+    print(tup_max((3, 2, 4, 1)))

@@ -3,4 +3,12 @@
 
 
 def tup_min(tup_n):
-    pass
+    mini = tup_n[0]
+    for i in tup_n:
+        if i < mini:
+            mini = i
+    return mini
+
+
+if __name__ == "__main__":
+    print(tup_min((3, 2, 4, 1)))

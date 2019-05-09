@@ -1,6 +1,7 @@
 import pytest
 from ..max import tup_max
 
+
 @pytest.mark.parametrize('tuple_x, expected', [
     ((23, 13, 8, 6), 23),
     ((3, 8, 4, 6), 8),
