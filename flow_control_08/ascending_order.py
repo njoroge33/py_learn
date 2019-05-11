@@ -6,4 +6,17 @@
 
 
 def py_sort(x_arr):
-    pass
+    try:
+        for i in range(len(x_arr)):
+            for j in range(i+1, len(x_arr)):
+                if x_arr[i] > x_arr[j]:
+                    temp = x_arr[i]
+                    x_arr[i] = x_arr[j]
+                    x_arr[j] = temp
+        return x_arr
+    except TypeError:
+        return "Only supports a list"
+
+
+if __name__ == "__main__":
+    print(py_sort([3, 6, 4, 1]))
