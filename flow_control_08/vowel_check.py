@@ -3,4 +3,15 @@
 
 
 def remove_vowels(x_str):
-    pass
+    y_str = []
+    lst = list("aeiouAEIOU")
+    try:
+        for i in x_str:
+            if i not in lst:
+                y_str.append(i)
+        return "".join(y_str)
+    except TypeError:
+        return "Wrong data type! string expected"
+
+
+print(remove_vowels("johnGICHUHI"))
