@@ -11,5 +11,26 @@
 # for more info on this quiz, go to this url: http://www.programmr.com/collatz-sequence-4
 
 
-def collatz_sequence(num):
+class ZeroError(Exception):
     pass
+
+
+def collatz_sequence(num):
+    if num == 0:
+        raise ZeroError("number less than 1")
+    sequence = [num]
+    stop = False
+    while not stop:
+        if num % 2 == 0:
+            num = num // 2
+            sequence.append(num)
+        else:
+            num = num * 3 + 1
+            sequence.append(num)
+        if num == 1:
+            stop = True
+    return sequence
+
+
+if __name__ == '__main__':
+    print(collatz_sequence(0))
