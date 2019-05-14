@@ -9,9 +9,35 @@
 # for more info on this quiz, go to this url: http://www.programmr.com/grade
 
 
-class InvalidScore(ValueError):
-	pass
+class InvalidError(Exception):
+    pass
+
+
+def average(marks):
+    a = int(sum(marks.values())/len(marks))
+    return a
+
+
+def grades(score):
+    if score > 100:
+        raise InvalidError("Invalid mark")
+    elif score >= 70:
+            return "A"
+    elif score >= 60:
+            return "B"
+    elif score >= 50:
+            return "C"
+    elif score >= 40:
+            return "D"
+    elif score < 40:
+            return "FAIL"
 
 
 def gen_report(marks):
-	pass
+    marks["average"] = average(marks)
+    for i in marks:
+        marks[i] = grades(marks[i])
+    return marks
+
+
+print(gen_report({'aen302': 80, 'aen303': 70, 'alt302': 55, 'alt303': 70}))

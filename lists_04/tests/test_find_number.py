@@ -9,6 +9,6 @@ from ..find_number import find_number
     ([10, 1, 2, 3, 4, 4], 4, 4)
 
 ])
-def test_find_number(x, expected):
-    actual = find_number(x)
+def test_find_number(x, y, expected):
+    actual = find_number(x, y)
     assert actual == expected

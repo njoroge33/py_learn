@@ -6,4 +6,11 @@
 
 
 def swap_ends(arr_x):
-    pass
+
+    arr_x[0], arr_x[-1] = arr_x[-1], arr_x[0]
+
+    return arr_x
+
+
+if __name__ == "__main__":
+    print(swap_ends([2, 3, 3, 4, 5]))

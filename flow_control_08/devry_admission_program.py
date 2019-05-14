@@ -7,4 +7,13 @@
 
 
 def is_admitted(gpa, sat):
-    pass
+    try:
+        if gpa < 1.8 or sat < 900:
+            return False
+        return True
+    except TypeError:
+        return "Wrong data type!: gpa and sat expected as integers or float"
+
+
+if __name__ == "__main__":
+    print(is_admitted(2, "1.8"))

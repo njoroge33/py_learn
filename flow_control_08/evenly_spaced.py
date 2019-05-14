@@ -7,4 +7,12 @@
 
 
 def evenly_spaced(a, b, c):
-    pass
+    try:
+        if b - a == c - b:
+            return True
+        return False
+    except TypeError:
+        return "Wrong data type!"
+
+
+print(evenly_spaced(1, 3, 5))
