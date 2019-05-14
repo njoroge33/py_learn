@@ -26,4 +26,5 @@ def user():
         return "ValueError:Pin expected as integer!"
 
 
-print(user())
+if __name__ == "__main__":
+    print(user())
