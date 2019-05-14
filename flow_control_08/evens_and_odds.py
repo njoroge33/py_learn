@@ -4,4 +4,13 @@
 
 
 def is_even_or_odd(num):
-    pass
+    try:
+        if num % 2 == 0:
+            return "EVEN"
+        return "ODD"
+    except TypeError:
+        return "Wrong data type!: you are expected to enter an integer"
+
+
+if __name__ == "__main__":
+    print(is_even_or_odd(9))

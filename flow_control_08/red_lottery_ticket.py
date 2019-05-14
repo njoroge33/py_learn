@@ -8,4 +8,18 @@
 
 
 def find_ticket_value(a, b, c):
-    pass
+    try:
+        if a == 2 and b == 2 and c == 2:
+            return 10
+        elif a == b and b == c and a == c:
+            return 5
+        elif b != a and c != a:
+            return 1
+        else:
+            return 0
+    except TypeError:
+        return "wrong Data Type!"
+
+
+if __name__ == "__main__":
+    print(find_ticket_value(0, 2, 2))
