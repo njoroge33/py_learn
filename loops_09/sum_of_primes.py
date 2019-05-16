@@ -11,13 +11,13 @@ def is_prime_number(x):
 		for y in range(2, x):
 			if not (x % y):
 				return False
-			return True
+		return True
 	else:
 		return False
 
 
 def sum_of_primes(num):
-	lst = [2]
+	lst = []
 	try:
 		if num <= 1:
 			raise ZeroError(" ")
@@ -31,4 +31,4 @@ def sum_of_primes(num):
 
 
 if __name__ == "__main__":
-	print(sum_of_primes(9))
+	print(sum_of_primes(2))
