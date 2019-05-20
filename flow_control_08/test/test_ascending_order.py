@@ -10,10 +10,3 @@ from ..ascending_order import py_sort
 def test_py_sort(x_arr, expected):
     actual = py_sort(x_arr)
     assert actual == expected
-
-
-def test_py_sort_raises_error():
-    with pytest.raises(ValueError) as err:
-        py_sort(['githeri', 'plus', 'ka_avocado'])
-        assert err
-

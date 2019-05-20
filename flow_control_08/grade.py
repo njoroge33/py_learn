@@ -9,9 +9,9 @@
 # for more info on this quiz, go to this url: http://www.programmr.com/grade
 
 
-class InvalidScore(ValueError):
-	pass
+class InvalidError(Exception):
+    pass
 
 
 def gen_report(marks):
-	pass
+    pass

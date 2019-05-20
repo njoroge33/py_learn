@@ -5,4 +5,12 @@
 
 
 def sum_even(arr_x):
-    pass
+    a = []
+    for i in arr_x:
+        if i % 2 == 0:
+            a.append(i)
+    return sum(a)
+
+
+if __name__ == "__main__":
+    print(sum_even([1, 2, 3, 4, 5, 6, 7]))
