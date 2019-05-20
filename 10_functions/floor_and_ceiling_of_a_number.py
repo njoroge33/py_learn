@@ -1,2 +1,0 @@
-# Ask the user for a number(read it as a floating point number), then print the respective ceiling and floor values 
-# for more info on this quiz, go to this url: http://www.programmr.com/floor-and-ceiling-number-2

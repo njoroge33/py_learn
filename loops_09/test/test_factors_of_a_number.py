@@ -4,7 +4,7 @@ from ..factors_of_a_number import prime_factors
 
 @pytest.mark.parametrize('x_num, expected', [
 	(10, [2, 5]),
-	(150, [2, 3, 5, 5]),
+	(150, [2, 3, 5]),
 	(30, [2, 3, 5]),
 	(0, [])
 ])
