@@ -1,2 +1,0 @@
-# Write a function introduce(name,age),which takes in 2 arguments name and age, given by the user and returns his/her intoduction as shown below 
-# for more info on this quiz, go to this url: http://www.programmr.com/myintro
