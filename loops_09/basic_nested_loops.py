@@ -4,4 +4,15 @@
 
 
 def gen_coordinates(x_num):
-	pass
+	x_lst = []
+	try:
+		for x in range(x_num + 1):
+			for y in range(x_num + 1):
+				x_lst.append((x, y))
+		return x_lst
+	except TypeError:
+		return "Wrong data type"
+
+
+if __name__ == "__main__":
+	print(gen_coordinates(5))
