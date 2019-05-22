@@ -3,4 +3,11 @@
 
 
 def number_of_char(x_str):
-	pass
+	count = 0
+	for i in x_str:
+		count += 1
+	return count
+
+
+if __name__ == "__main__":
+	print(number_of_char("hheg dhdh"))
