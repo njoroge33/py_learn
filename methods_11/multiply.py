@@ -3,4 +3,8 @@
 
 
 def multiply(num_1, num_2):
-    pass
+    return num_1 * num_2
+
+
+if __name__ == "__main__":
+    print(multiply(8, 3))

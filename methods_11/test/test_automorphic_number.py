@@ -7,7 +7,7 @@ from ..automorphic_number import auto_number
     (5, True),
     (67, False),
     (76, True),
-    (890625, True)
+    (75, False)
 
 ])
 def test_automorphic_number(number, expected):
