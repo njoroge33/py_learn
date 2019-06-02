@@ -4,4 +4,9 @@
 
 
 def fibo(int_x):
-    pass
+    if int_x < 2:
+        return int_x
+    return fibo(int_x - 1) + fibo(int_x - 2)
+
+
+print(fibo(9))
