@@ -3,4 +3,12 @@
 
 
 def count_char(x_str, char):
-    pass
+    count = 0
+    for i in list(x_str):
+        if char == i:
+            count += 1
+    return count
+
+
+if __name__ == "__main__":
+    print(count_char("johno", "o"))

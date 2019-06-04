@@ -4,4 +4,16 @@
 
 
 def alphabet_count(x_string, alphabet):
-    pass
+    lst = []
+    count = 0
+    for i in range(len(x_string)):
+        if x_string[i] == alphabet:
+            lst.append(i)
+            count += 1
+    if count == 0:
+        return False
+    lst.append(count)
+    return tuple(lst)
+
+
+print(alphabet_count("yhffhf", "o"))
