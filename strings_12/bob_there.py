@@ -3,3 +3,7 @@
 # If it does not print "False" 
 # The middle "o" character can be any character 
 # for more info on this quiz, go to this url: http://www.programmr.com/bob-there-1
+
+
+def bob_there(x_str):
+    pass
