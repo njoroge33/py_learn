@@ -3,4 +3,8 @@
 
 
 def num_copies(x_string, num):
-    pass
+    return x_string * num
+
+
+if __name__ == "__main__":
+    print(num_copies("aa", 2))

@@ -6,4 +6,10 @@
 
 
 def swap_char(x_str):
-    pass
+    a = (len(x_str))//2
+    y_str = x_str[a::] + x_str[:a]
+    return y_str
+
+
+if __name__ == "__main__":
+    print(swap_char("abcde"))

@@ -4,4 +4,12 @@
 
 
 def front_end(x_str):
-    pass
+    if len(x_str) > 1:
+        if x_str[:2] == x_str[-2:]:
+            return True
+        return False
+    return False
+
+
+if __name__ == "__main__":
+    print(front_end("edited"))

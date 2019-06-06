@@ -6,4 +6,11 @@
 
 
 def bob_there(x_str):
-    pass
+    for i in range(len(x_str)):
+        if x_str[i] == "b" and x_str[i+2] == "b":
+            return True
+    return False
+
+
+if __name__ == "__main__":
+    print(bob_there("robbin"))
