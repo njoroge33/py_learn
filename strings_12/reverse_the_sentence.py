@@ -3,4 +3,9 @@
 
 
 def reverse_str(x_str):
-    pass
+    x_lst = x_str.split(" ")
+    return" ".join(x_lst[-1::-1])
+
+
+if __name__ == "__main__":
+    print(reverse_str("here is an example"))

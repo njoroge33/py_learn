@@ -3,7 +3,7 @@ from ..count_triplets import count_triplets
 
 
 @pytest.mark.parametrize("x_str, expected", [
-    ("zzzzzz", 2),
+    ("jjjjjjkkkohn", 3),
     ("crosssection", 1),
     ("cross", False)
 ])
