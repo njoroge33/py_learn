@@ -12,5 +12,5 @@ def len_word(x_str):
     return longest_word
 
 
-if __name__ =="__main__":
+if __name__ == "__main__":
     print(len_word("john gichuhi"))
