@@ -3,4 +3,11 @@
 
 
 def double_char(x_str):
-    pass
+    a = []
+    for i in x_str:
+        a.append(i * 2)
+    return "".join(a)
+
+
+if __name__ == "__main__":
+    print(double_char("abb"))

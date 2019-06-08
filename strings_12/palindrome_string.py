@@ -3,4 +3,10 @@
 
 
 def palindrome(x_string):
-    pass
+    if x_string[0::] == x_string[::-1]:
+        return True
+    return False
+
+
+if __name__ == "__main__":
+    print(palindrome("aka"))

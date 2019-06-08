@@ -3,4 +3,8 @@
 
 
 def cap(x_str):
-    pass
+    return x_str.capitalize()
+
+
+if __name__ == "__main__":
+    print(cap("john"))

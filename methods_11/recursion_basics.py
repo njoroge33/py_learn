@@ -9,4 +9,11 @@ def fibo(int_x):
     return fibo(int_x - 1) + fibo(int_x - 2)
 
 
-print(fibo(9))
+def gen_series(int_x):
+    x_lst = []
+    for i in range(int_x + 1):
+        x_lst.append(fibo(i))
+    return x_lst
+
+
+print(gen_series(9))

@@ -4,4 +4,8 @@
 
 
 def first_two(x_str):
-    pass
+    return x_str[:2]
+
+
+if __name__ == "__main__":
+    print(first_two("j"))

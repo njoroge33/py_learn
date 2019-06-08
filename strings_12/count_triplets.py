@@ -6,4 +6,21 @@
 
 
 def count_triplets(x_str):
-    pass
+    x_lst = list(x_str)
+    count = 0
+    prev = ''
+    for i in range(len(x_lst) - 1):
+        x = x_lst[i]
+        y = x_lst[i + 1]
+        z = x_lst[i - 1]
+        if z == x and x == y and not (z == prev):
+            count += 1
+            prev = z
+        else:
+            prev = ''
+    return count
+
+
+if __name__ == "__main__":
+    print(count_triplets("jjjjjjkkkohn"))
+
