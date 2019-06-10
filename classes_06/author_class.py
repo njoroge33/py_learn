@@ -5,4 +5,14 @@
 
 
 class Author:
-	pass
+	def __init__(self, author_first_name, author_second_name, book_name):
+		self.author_name = author_first_name + ' ' + author_second_name
+		self.email_id = author_first_name + author_second_name + '@' + 'gmail.com'
+		self.book_name = book_name
+
+
+author_1 = Author("chimamanda", "ngozi", "purple hibiscus")
+
+print(author_1.author_name)
+print(author_1.email_id)
+print(author_1.book_name)

@@ -9,3 +9,28 @@
 # If the point lies directly on x and/or y axis return 0 
 # Create a Point object and display object's quadrant 
 # for more info on this quiz, go to this url: http://www.programmr.com/quadrant-point-2
+
+
+class Point:
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def decide_quadrant(self):
+        x = self.x
+        y = self.y
+        if  x > 0 and y > 0:
+            return "Quadrant 1"
+        if  x < 0 and y > 0:
+            return "Quadrant 2"
+        if  x < 0 and y < 0:
+            return "Quadrant 3"
+        if  x > 0 and y < 0:
+            return "Quadrant 4"
+        else:
+            return 0
+
+
+points = Point(4, 2)
+
+print(points.decide_quadrant())

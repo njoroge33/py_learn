@@ -1,5 +1,6 @@
 # Complete the class TimeSpan
-# A TimeSpan object stores a span of time in hours and minutes (for example, the time span between 8:00am and 10:30am is 2 hours, 30 minutes)
+# A TimeSpan object stores a span of time in hours and minutes
+#  (for example, the time span between 8:00am and 10:30am is 2 hours, 30 minutes)
 # Each TimeSpan object should have the following methods:
 #       - get_hours()
 #       Returns the number of hours in this time span
@@ -17,3 +18,19 @@
 # The minutes should always be reported as being in the range of 0 to 59
 # That means that you may have to "carry" 60 minutes into a full hour
 # for more info on this quiz, go to this url: http://www.programmr.com/time-span
+
+from datetime import datetime, timedelta
+class Time_span:
+    def  __init__(self, t1, t2):
+        self.t1 = t1
+        self.t2 = t2
+    def get_timespan(self):
+        t_format ='%H:%M'
+        timespan = str(datetime.strptime(self.t1,t_format) - datetime.strptime(self.t2,t_format))
+        hour,minutes,seconds = timespan.split(':')
+        return f'{hour}' +' hours ' + f'{minutes}' +' minutes'
+
+
+time = Time_span('10:00', '08:30')
+
+print(time.get_timespan())
